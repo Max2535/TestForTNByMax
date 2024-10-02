@@ -12,23 +12,22 @@ const TitleWithCopyLink = ({ title,link }) => {
     });
   };
 
-  return (
+return (
     <div className="relative inline-block">
-    <h1 className="text-2xl font-bold pr-20">{title}</h1>
-      {/* ไอคอน Copy Link ที่ลอยอยู่ด้านขวา */}
-      <div className="absolute top-0 right-6 flex items-center">
-      <button
-        onClick={copyLinkToClipboard}
-        className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-300 ml-4"
-      >
-        {
-            copySuccess? <ClipboardCheck className="h-6 w-6"/> : <Copy className="h-6 w-6" />
-        }
-      </button>
-     
+        <a href={link} className="text-2xl font-bold pr-20" target='_blank' rel="noreferrer">{title}</a>
+        {/* ไอคอน Copy Link ที่ลอยอยู่ด้านขวา */}
+        <div className="absolute top-0 right-6 flex items-center">
+            <button
+                onClick={copyLinkToClipboard}
+                className="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-300 ml-4"
+            >
+                {
+                    copySuccess ? <ClipboardCheck className="h-6 w-6" /> : <Copy className="h-6 w-6" />
+                }
+            </button>
+        </div>
     </div>
-  </div>
-  );
+);
 };
 
 export default TitleWithCopyLink;
