@@ -58,6 +58,9 @@ const App = () => {
           description={trip.description}
           mainImage={trip.photos[0]}
           smallImages={trip.photos}
+          url={trip.url}
+          tags={trip.tags}
+          onClickTag={setKeyword}
         />
       ))}
 
@@ -66,30 +69,13 @@ const App = () => {
           <span
             className="flex items-center"
           >
-            <Globe className="mr-1" size={16}  
-            onClick={() => {
-              setKeyword("เกาะ");
-              setTitle("เกาะ");
-            }}/> เกาะ
+            <Globe className="mr-1" size={16}/> <button className="text-blue-500 underline" onClick={() => {setKeyword("เกาะ");setTitle("เกาะ");}}> เกาะ</button>
           </span>
-          <span
-            className="flex items-center"
-            onClick={() => {
-              setKeyword("ทะเล");
-              setTitle("ทะเล");
-            }}
-          >
-            <MapPin className="mr-1" size={16} /> ทะเล
+          <span className="flex items-center" >
+            <MapPin className="mr-1" size={16} /> <button className="text-blue-500 underline" onClick={() => {setKeyword("ทะเล");setTitle("ทะเล");}}> ทะเล</button>
           </span>
-          <span
-            className="flex items-center"
-            onClick={() => {
-              setKeyword("ธรรมชาติ");
-              setTitle("ธรรมชาติ");
-            }}
-          >
-            <Clock className="mr-1" size={16} />
-            ธรรมชาติ
+          <span className="flex items-center">
+            <Clock className="mr-1" size={16} /> <button className="text-blue-500 underline" onClick={() => {setKeyword("ธรรมชาติ");setTitle("ธรรมชาติ");}}> ธรรมชาติ</button>            
           </span>
         </div>
       </div>
