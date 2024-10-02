@@ -1,0 +1,76 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #3498db;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.trip-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
+  gap: 20px;
+}
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.trip-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.trip-details {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.trip-details h2 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.trip-details p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.trip-details a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.trip-tags {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.trip-tags span {
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #666;
+}
