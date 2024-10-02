@@ -2,7 +2,7 @@ import React from 'react';
 
 const TravelCard = ({ title, description, mainImage, smallImages }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden mb-6 p">
     <img src={mainImage} alt={title} className="w-full h-48 object-cover" />
     <div className="p-4">
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
